@@ -8,7 +8,7 @@ def hoemPage():
     return "hello server"
 
 
-runPort = os.getenv('PORT') if os.getenv('PORT') else '8888'
+runPort = os.getenv('PORT') if os.getenv('PORT') else '80'
 
 
 if __name__ == "__main__": 
