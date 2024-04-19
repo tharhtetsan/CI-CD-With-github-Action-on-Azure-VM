@@ -77,6 +77,3 @@ jobs:
         location: 'west us'
         
         image: ${{ secrets.ACR_CONTAINER_REGISTRY }}/flask_test_app:${{ github.sha }}
-        
-        cpu: 1
-        memory: 3
