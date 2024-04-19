@@ -78,10 +78,8 @@ jobs:
         location: 'west us'
         
         image: ${{ secrets.ACR_CONTAINER_REGISTRY }}/flask_test_app:${{ github.sha }}
-        environmentVariables:
-          name: 'TEST_ENV'
-          value: 'my-exposed-value'
-      
+       
+        environment-variables: ENV=${{ env.ENV }}
         resources:
           requests:
             cpu: 1.0
