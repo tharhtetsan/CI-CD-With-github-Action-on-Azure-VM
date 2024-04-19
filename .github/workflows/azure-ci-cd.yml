@@ -77,4 +77,4 @@ jobs:
         location: 'west us'
         
         image: ${{ secrets.ACR_CONTAINER_REGISTRY }}/flask_test_app:${{ github.sha }}
-        secure-environment-variables: key1=${{ secrets.ACR_USERNAME }}
+        secure-environment-variables: key1=${{ env.ENV }}
