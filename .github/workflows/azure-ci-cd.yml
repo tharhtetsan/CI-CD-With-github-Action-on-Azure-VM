@@ -77,3 +77,4 @@ jobs:
         location: 'west us'
         
         image: ${{ secrets.ACR_CONTAINER_REGISTRY }}/flask_test_app:${{ github.sha }}
+        environment-variables: key1=value1 
