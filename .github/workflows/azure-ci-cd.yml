@@ -51,8 +51,8 @@ jobs:
     needs: build
   
     env:
-      CONTAINER_NAME: flask-test-ap
-      IMAGE_NAME: flask-test-ap
+      CONTAINER_NAME: flask-test-app
+      IMAGE_NAME: flask-test-app
   
     steps:
 
