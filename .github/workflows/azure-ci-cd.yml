@@ -80,7 +80,6 @@ jobs:
         image: ${{ secrets.ACR_CONTAINER_REGISTRY }}/flask_test_app:${{ github.sha }}
        
         environment-variables: ENV=${{ env.ENV }}
-        resources:
-          requests:
-            cpu: 1.0
-            memoryInGB: 3.0
+   
+        cpu: 1
+        memory: 3
