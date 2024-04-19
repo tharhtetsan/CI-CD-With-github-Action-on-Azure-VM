@@ -75,5 +75,5 @@ jobs:
         registry-login-server: ${{ secrets.ACR_CONTAINER_REGISTRY }}
         registry-username: ${{ secrets.ACR_USERNAME }}
         registry-password: ${{ secrets.ACR_PASSWORD }}
-        name: flask_test_app
+        name: flask-test-app
         location: 'west us'
