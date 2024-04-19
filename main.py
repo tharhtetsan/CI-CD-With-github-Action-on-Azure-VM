@@ -5,7 +5,8 @@ app = Flask(__name__)
 
 @app.get('/')
 def hoemPage():
-    return "hello server"
+    temp = os.getenv("TEST_ENV")
+    return "hello server : "+temp
 
 
 runPort = os.getenv('PORT') if os.getenv('PORT') else '80'

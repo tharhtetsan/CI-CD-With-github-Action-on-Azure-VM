@@ -71,9 +71,18 @@ jobs:
       with:
         resource-group: ${{ secrets.RESOURCE_GROUP }}
         dns-name-label: ${{ secrets.ACR_USERNAME }}${{ github.run_number }}
-        image: ${{ secrets.ACR_CONTAINER_REGISTRY }}/flask_test_app:${{ github.sha }}
         registry-login-server: ${{ secrets.ACR_CONTAINER_REGISTRY }}
         registry-username: ${{ secrets.ACR_USERNAME }}
         registry-password: ${{ secrets.ACR_PASSWORD }}
         name: flask-test-app
         location: 'west us'
+        
+        image: ${{ secrets.ACR_CONTAINER_REGISTRY }}/flask_test_app:${{ github.sha }}
+        environmentVariables:
+          - name: 'TEST_ENV'
+            value: 'my-exposed-value'
+      
+        resources:
+          requests:
+            cpu: 1.0
+            memoryInGB: 3.0
