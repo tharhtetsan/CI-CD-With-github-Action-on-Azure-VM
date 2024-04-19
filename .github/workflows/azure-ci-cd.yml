@@ -79,7 +79,7 @@ jobs:
         image: ${{ secrets.ACR_CONTAINER_REGISTRY }}/flask_test_app:${{ github.sha }}
        
         environment-variables:
-         - name: 'ENV'
+           name: 'ENV'
            value: ${{ env.ENV }}
    
         cpu: 1
