@@ -51,8 +51,8 @@ jobs:
     needs: build
   
     env:
-      CONTAINER_NAME: flask_test_app
-      IMAGE_NAME: flask_test_app
+      CONTAINER_NAME: FlaskTestApp
+      IMAGE_NAME: FlaskTestApp
    
   
     steps:
@@ -74,7 +74,7 @@ jobs:
         registry-login-server: ${{ secrets.ACR_CONTAINER_REGISTRY }}
         registry-username: ${{ secrets.ACR_USERNAME }}
         registry-password: ${{ secrets.ACR_PASSWORD }}
-        name: flask-test-app
+        name: FlaskTestApp
         location: 'west us'
         
         image: ${{ secrets.ACR_CONTAINER_REGISTRY }}/flask_test_app:${{ github.sha }}
