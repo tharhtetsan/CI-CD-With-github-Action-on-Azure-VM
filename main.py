@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.get('/')
 def hoemPage():
-    temp = os.getenv("my_env")
+    temp = os.getenv("MyName")
     return "hello server : "+temp
 
 
