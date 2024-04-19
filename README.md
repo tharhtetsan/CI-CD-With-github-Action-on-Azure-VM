@@ -3,7 +3,7 @@
 #### Test
 ```
 docker build . -t hello
-docker run 8888:8888 hello 
+docker run -p 80:80 hello 
 ```
 
 #### References
