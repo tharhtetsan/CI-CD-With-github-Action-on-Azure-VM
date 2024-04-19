@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.get('/')
 def hoemPage():
-    temp = os.getenv("key1")
+    temp = os.getenv("GOOGLE_TRANSLATE_API_KEY")
     return "hello server : "+temp
 
 

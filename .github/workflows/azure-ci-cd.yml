@@ -77,4 +77,4 @@ jobs:
         location: 'west us'
         
         image: ${{ secrets.ACR_CONTAINER_REGISTRY }}/flask_test_app:${{ github.sha }}
-        secure-environment-variables: key1=${{ env.ENV }}
+        secure-environment-variables: GOOGLE_TRANSLATE_API_KEY=${{ secrets.ACR_USERNAME }}
