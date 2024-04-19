@@ -79,8 +79,8 @@ jobs:
         
         image: ${{ secrets.ACR_CONTAINER_REGISTRY }}/flask_test_app:${{ github.sha }}
         environmentVariables:
-          - name: 'TEST_ENV'
-            value: 'my-exposed-value'
+          name: 'TEST_ENV'
+          value: 'my-exposed-value'
       
         resources:
           requests:
