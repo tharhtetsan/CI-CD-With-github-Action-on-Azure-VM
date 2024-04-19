@@ -70,7 +70,6 @@ jobs:
       uses: 'azure/aci-deploy@v1'
       with:
         resource-group: ${{ secrets.RESOURCE_GROUP }}
-        dns-name-label: ${{ secrets.RESOURCE_GROUP }}${{ github.run_number }}
         image: ${{ secrets.ACR_CONTAINER_REGISTRY }}/flask_test_app:${{ github.sha }}
         registry-login-server: ${{ secrets.ACR_CONTAINER_REGISTRY }}
         registry-username: ${{ secrets.ACR_USERNAME }}
